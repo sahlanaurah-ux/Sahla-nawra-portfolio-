@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sahla Nawra V.P. | AI and data projects</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f4f7f8;--panel:#ffffff;--ink:#12233f;--muted:#51627a;--line:#d6e0e5;--accent:#0f6b64;--accent-ink:#ffffff;--tint:#dcefed;--bar1:#0f6b64;--bar2:#6fb5ae;color-scheme:light}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1722;--panel:#152333;--ink:#e8eff4;--muted:#a1b1c1;--line:#26384a;--accent:#5fd0c5;--accent-ink:#0e1722;--tint:#16363a;--bar1:#5fd0c5;--bar2:#2d6b66;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1722;--panel:#152333;--ink:#e8eff4;--muted:#a1b1c1;--line:#26384a;--accent:#5fd0c5;--accent-ink:#0e1722;--tint:#16363a;--bar1:#5fd0c5;--bar2:#2d6b66;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:20}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font:700 1.05rem Georgia,"Times New Roman",serif;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:22px}
+nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+nav a:hover{color:var(--ink);text-decoration:underline}
+.hero{padding:64px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+h1{font:700 clamp(2.4rem,6.5vw,3.8rem)/1.05 Georgia,"Times New Roman",serif;margin:0 0 18px;letter-spacing:-.01em}
+.lead{font-size:1.2rem;margin:0 0 14px;max-width:34ch}
+.facts{color:var(--muted);margin:0 0 26px;max-width:46ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;border:1.5px solid var(--accent);font-weight:600;text-decoration:none}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn:hover{background:var(--tint);color:var(--ink)}
+.btn.main:hover{background:var(--accent);filter:brightness(1.1);color:var(--accent-ink)}
+.funnel{margin:0}
+.funnel svg{width:100%;height:auto;display:block}
+.bar{fill:var(--bar1)}.bar.b2{fill:var(--bar2)}
+.ft{fill:var(--accent-ink);font:600 13px system-ui,sans-serif}.ft.dk{fill:var(--ink)}
+.funnel figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 1.9rem/1.2 Georgia,"Times New Roman",serif;margin:0 0 28px}
+.proj{display:grid;grid-template-columns:230px 1fr;gap:12px 36px;padding:26px 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj h3{margin:0 0 6px;font-size:1.15rem;line-height:1.3}
+.stack{margin:0;color:var(--muted);font-size:.92rem}
+.proj p{margin:0 0 10px;max-width:60ch}
+.tag{display:inline-block;background:var(--tint);color:var(--accent);font-size:.84rem;font-weight:600;padding:2px 10px;border-radius:999px;margin-right:10px}
+.tl{margin:0;padding:0;list-style:none;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 28px 26px}
+.tl li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.tl h3{margin:0;font-size:1.08rem}
+.when{margin:2px 0 6px;color:var(--muted);font-size:.92rem}
+.tl p{margin:0;max-width:62ch}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.two h2{font-size:1.5rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px 40px}
+.skills h3{margin:0 0 6px;font-size:1rem}
+.skills p{margin:0;color:var(--muted)}
+.certs{margin:0;padding:0;list-style:none}
+.certs li{padding:12px 0;border-top:1px solid var(--line)}
+.certs li:first-child{border-top:0;padding-top:0}
+.certs span{display:block;color:var(--muted);font-size:.92rem}
+.contact{padding-bottom:72px}
+.mail{display:inline-block;font:700 clamp(1.4rem,4.5vw,2.2rem) Georgia,serif;margin:0 0 20px;word-break:break-all}
+.clist{margin:0;padding:0;list-style:none;display:grid;gap:6px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:22px 0 34px;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:no-preference){.funnel .bar{transform-origin:left center;animation:grow .9s ease-out both}.funnel .bar:nth-of-type(2){animation-delay:.12s}.funnel .bar:nth-of-type(3){animation-delay:.24s}.funnel .bar:nth-of-type(4){animation-delay:.36s}}
+@keyframes grow{from{transform:scaleX(.05);opacity:.3}to{transform:scaleX(1);opacity:1}}
+@media (max-width:720px){.hero{padding:40px 0}.hero .wrap,.two{grid-template-columns:1fr;gap:34px}.proj{grid-template-columns:1fr;gap:8px}nav a:not(:last-child){display:none}section{padding:44px 0}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#top">Sahla Nawra V.P.</a>
+  <nav aria-label="Sections"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <div>
+    <h1>Sahla Nawra V.P.</h1>
+    <p class="lead">I build AI and data projects with Python, and I use Claude Code to build them.</p>
+    <p class="facts">MSc Computer Science from the University of Calicut (2026, CGPA 3.69). Based in Abu Dhabi, able to meet in Dubai, and available to start immediately.</p>
+    <div class="btns">
+      <a class="btn main" href="mailto:sahlanaurah@gmail.com">Email me</a>
+      <a class="btn" href="https://github.com/sahlanaurah-ux">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/sahla-nawra-978242273">LinkedIn</a>
+    </div>
+  </div>
+  <figure class="funnel" aria-label="A purchase funnel with four shrinking stages">
+    <svg viewBox="0 0 300 190" role="img">
+      <rect class="bar" x="0" y="0" width="300" height="38" rx="6"/><text class="ft" x="12" y="24">Visit</text>
+      <rect class="bar" x="0" y="48" width="226" height="38" rx="6"/><text class="ft" x="12" y="72">Product page</text>
+      <rect class="bar b2" x="0" y="96" width="150" height="38" rx="6"/><text class="ft dk" x="12" y="120">Cart</text>
+      <rect class="bar b2" x="0" y="144" width="86" height="38" rx="6"/><text class="ft dk" x="12" y="168">Buy</text>
+    </svg>
+    <figcaption>The drop-off my funnel dashboard measures. The shapes are an illustration, not real data.</figcaption>
+  </figure>
+</div></div>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <article class="proj">
+    <div><h3>E-commerce funnel drop-off dashboard</h3><p class="stack">Python, Pandas, Dash, Plotly, scikit-learn</p></div>
+    <div><p>An interactive dashboard that shows where shoppers leave the purchase funnel, split by country, device and referral source. It also trains Random Forest and Gradient Boosting models to predict purchases and compares their accuracy.</p>
+    <span class="tag">Built with Claude Code</span><a href="https://github.com/sahlanaurah-ux/funnel-drop-analysis-mains">GitHub repository</a></div>
+  </article>
+  <article class="proj">
+    <div><h3>Customer segmentation</h3><p class="stack">Python, Pandas, scikit-learn, Matplotlib</p></div>
+    <div><p>Groups 200 mall customers into 5 segments by annual income and spending score. The number of clusters comes from the elbow method, and each segment is plotted with its centroid.</p>
+    <span class="tag">Developed with help from Claude</span><a href="https://github.com/sahlanaurah-ux/Customer-Segmentation-using-K-Means-Clustering">GitHub repository</a></div>
+  </article>
+  <article class="proj">
+    <div><h3>Cat and dog image classifier</h3><p class="stack">Python, TensorFlow, Keras, CNN, OpenCV</p></div>
+    <div><p>A convolutional neural network that classifies dog and cat images, with three convolution blocks, batch normalization and dropout.</p>
+    <span class="tag">Developed with help from Claude</span><a href="https://github.com/sahlanaurah-ux/cat-vs-dog-imgclassification-">GitHub repository</a></div>
+  </article>
+  <article class="proj">
+    <div><h3>Asan learning app</h3><p class="stack">Flutter, mobile development</p></div>
+    <div><p>A mobile app that teaches children the alphabet with colorful visuals and simple games.</p>
+    <span class="tag">Built with Claude Code</span></div>
+  </article>
+</div></section>
+
+<section id="experience"><div class="wrap two">
+  <div>
+    <h2>Experience</h2>
+    <ul class="tl">
+      <li><h3>AI/ML engineering intern</h3><p class="when">ArithMatrix Tech, September to October 2026</p><p>Four-week internship, completed with distinction. <a href="https://arithmatrix.tech/avip/verify?pid=arith79528">Verify the credential</a>.</p></li>
+      <li><h3>MERN stack development intern</h3><p class="when">Futura Labs Technologies LLP, Calicut</p><p>Designed database schemas, wrote server-side code and worked in agile sprints.</p></li>
+      <li><h3>Python and Django intern</h3><p class="when">Three-month internship</p><p>Python scripting, testing, debugging and logging, with Git and GitHub for version control.</p></li>
+    </ul>
+  </div>
+  <div>
+    <h2>Education</h2>
+    <ul class="tl">
+      <li><h3>MSc in Computer Science</h3><p class="when">University of Calicut, 2026</p><p>CGPA 3.69, A grade. Centre for Computer Science and Information Technology (CCSIT).</p></li>
+      <li><h3>Bachelor of Computer Applications</h3><p class="when">University of Calicut, April 2023</p><p>First Class, grade B+. LBS Centre for Science and Technology.</p></li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h3>AI tools</h3><p>Claude Code, Claude, prompt engineering, generative AI, LLMs</p></div>
+    <div><h3>AI and machine learning</h3><p>Machine learning, deep learning, CNN, TensorFlow, Keras, computer vision, K-means, predictive modelling</p></div>
+    <div><h3>Programming</h3><p>Python (Pandas, scikit-learn, Django), JavaScript, Java, C</p></div>
+    <div><h3>Web and mobile</h3><p>MERN stack, REST APIs, HTML5, CSS3, Flutter</p></div>
+    <div><h3>Data</h3><p>Data cleaning, data visualization (Plotly, Dash), MongoDB, database schema design</p></div>
+    <div><h3>Tools and languages</h3><p>Git, GitHub, Jupyter Notebook, Visual Studio Code. English, Malayalam, Hindi, Tamil and basic Arabic.</p></div>
+  </div>
+</div></section>
+
+<section id="certifications"><div class="wrap">
+  <h2>Certifications</h2>
+  <ul class="certs">
+    <li>Certified AI Prompt Engineer<span>One Million Prompters Global Initiative, Dubai Future Foundation</span></li>
+    <li>AI Bootcamp: Build Your First Predictive Model with Python<span>Upcode Software Labs, October 2026</span></li>
+    <li>AI/ML Engineering Internship Certificate, with distinction<span>ArithMatrix Tech</span></li>
+    <li>MERN Stack Internship Certificate<span>Futura Labs Technologies LLP</span></li>
+    <li>Professional Certification in Python Programming</li>
+    <li>MERN Stack Development Competency Certificate</li>
+  </ul>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Contact</h2>
+  <a class="mail" href="mailto:sahlanaurah@gmail.com">sahlanaurah@gmail.com</a>
+  <ul class="clist">
+    <li>Abu Dhabi, UAE. I can meet in Dubai at any time.</li>
+    <li>+971 502655753</li>
+    <li><a href="https://www.linkedin.com/in/sahla-nawra-978242273">linkedin.com/in/sahla-nawra-978242273</a></li>
+    <li><a href="https://github.com/sahlanaurah-ux">github.com/sahlanaurah-ux</a></li>
+  </ul>
+</div></section>
+</main>
+<footer><div class="wrap">Sahla Nawra V.P.</div></footer>
+</body>
+</html>
